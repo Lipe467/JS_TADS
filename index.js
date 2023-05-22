@@ -1,13 +1,6 @@
-const express = require("express");
+const {server} = require("./server")
 
-const server = express();
-
-server.get("/health",(req, res) => {
-    res.send("server is running");
-})
-
-const port = 3000;
-
+const port = 8080;
 server.listen(port, () => {
-    console.log(`server is running`);
-})
+    console.log(`Server running on port ${port}`);
+});
